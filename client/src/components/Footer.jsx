@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Instagram, Facebook, Youtube, MessageCircle } from 'lucide-react';
 import logo from '../a1ssets/logo.png';
 
 const Footer = () => {
@@ -18,7 +19,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-8">
           <div>
             <h4 className="font-bold text-purple-900 mb-3">Shop</h4>
             <ul className="space-y-2">
@@ -32,25 +33,66 @@ const Footer = () => {
             <h4 className="font-bold text-purple-900 mb-3">About</h4>
             <ul className="space-y-2">
               <li><Link to="/about" className="text-gray-700 hover:text-purple-600 transition-colors">Our Story</Link></li>
-              <li><Link to="/contact" className="text-gray-700 hover:text-purple-600 transition-colors">Contact</Link></li>
-              <li><Link to="/blog" className="text-gray-700 hover:text-purple-600 transition-colors">Parenting Tips</Link></li>
+              <li><Link to="/contact-us" className="text-gray-700 hover:text-purple-600 transition-colors">Contact</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="font-bold text-purple-900 mb-3">Help</h4>
             <ul className="space-y-2">
-              <li><Link to="/shipping" className="text-gray-700 hover:text-purple-600 transition-colors">Shipping</Link></li>
-              <li><Link to="/returns" className="text-gray-700 hover:text-purple-600 transition-colors">Returns</Link></li>
+              <li><Link to="/shipping" className="text-gray-700 hover:text-purple-600 transition-colors">Shipping Policy</Link></li>
+              <li><Link to="/refund" className="text-gray-700 hover:text-purple-600 transition-colors">Refund Policy</Link></li>
               <li><Link to="/faq" className="text-gray-700 hover:text-purple-600 transition-colors">FAQ</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-purple-900 mb-3">Follow Us</h4>
+            <h4 className="font-bold text-purple-900 mb-3">Legal</h4>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Instagram</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Facebook</a></li>
-              <li><a href="#" className="text-gray-700 hover:text-purple-600 transition-colors">Pinterest</a></li>
+              <li><Link to="/terms" className="text-gray-700 hover:text-purple-600 transition-colors">Terms & Conditions</Link></li>
+              <li><Link to="/privacy" className="text-gray-700 hover:text-purple-600 transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/shipping" className="text-gray-700 hover:text-purple-600 transition-colors">Shipping Info</Link></li>
+              <li><Link to="/refund" className="text-gray-700 hover:text-purple-600 transition-colors">Refund Policy</Link></li>
             </ul>
+          </div>
+          <div>
+            <h4 className="font-bold text-purple-900 mb-3">Follow Us</h4>
+            <div className="flex gap-4">
+              <a 
+                href="https://wa.me/918420514587" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-green-500 transition-colors"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle size={24} strokeWidth={1.5} />
+              </a>
+              <a 
+                href="https://instagram.com/pencilpandaofficial" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-pink-600 transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram size={24} strokeWidth={1.5} />
+              </a>
+              <a 
+                href="https://facebook.com/pencilpandaofficial" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-600 transition-colors"
+                aria-label="Facebook"
+              >
+                <Facebook size={24} strokeWidth={1.5} />
+              </a>
+              <a 
+                href="https://youtube.com/@pencilpandaofficial" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-red-600 transition-colors"
+                aria-label="YouTube"
+              >
+                <Youtube size={24} strokeWidth={1.5} />
+              </a>
+            </div>
           </div>
         </div>
 
