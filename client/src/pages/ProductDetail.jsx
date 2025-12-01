@@ -111,7 +111,7 @@ const ProductDetail = () => {
               {product.name}
             </h1>
             <p className="text-4xl md:text-5xl font-bold text-purple-900 mb-6">
-              ${product.price}
+              ₹{product.price}
             </p>
             <p className="text-gray-700 mb-6 text-base md:text-lg">
               {product.description}
@@ -177,7 +177,7 @@ const ProductDetail = () => {
             New Noodoll night lights
           </h2>
           <p className="text-3xl md:text-4xl font-bold text-purple-900 text-center mb-6">
-            $13.50
+            ₹13.50
           </p>
           <div className="text-center">
             <button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors">

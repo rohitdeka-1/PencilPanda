@@ -14,7 +14,7 @@ const ProductCard = ({ id, name, price, image, bgColor = 'bg-pink-100' }) => {
       </div>
       <div className="mt-3 text-center">
         <h3 className="text-sm md:text-base font-medium text-gray-700 mb-1">{name}</h3>
-        <p className="text-2xl font-bold text-purple-900">${price}</p>
+        <p className="text-2xl font-bold text-purple-900">₹{price}</p>
       </div>
     </Link>
   );

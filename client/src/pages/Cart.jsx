@@ -53,7 +53,7 @@ const Cart = () => {
                 </div>
                 <div className="flex-1 min-w-0">
                   <h3 className="font-semibold text-purple-900 mb-1">{item.name}</h3>
-                  <p className="text-purple-900 font-bold mb-2">${item.price.toFixed(2)}</p>
+                  <p className="text-purple-900 font-bold mb-2">₹{item.price.toFixed(2)}</p>
                   <div className="flex items-center gap-2">
                     <button 
                       onClick={() => updateQuantity(item.id, item.quantity - 1)}
@@ -86,15 +86,15 @@ const Cart = () => {
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between">
                   <span className="text-gray-700">Subtotal</span>
-                  <span className="font-semibold">${subtotal.toFixed(2)}</span>
+                  <span className="font-semibold">₹{subtotal.toFixed(2)}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-700">Shipping</span>
-                  <span className="font-semibold">${shipping.toFixed(2)}</span>
+                  <span className="font-semibold">₹{shipping.toFixed(2)}</span>
                 </div>
                 <div className="border-t border-purple-200 pt-3 flex justify-between">
                   <span className="font-bold text-purple-900 text-lg">Total</span>
-                  <span className="font-bold text-purple-900 text-lg">${total.toFixed(2)}</span>
+                  <span className="font-bold text-purple-900 text-lg">₹{total.toFixed(2)}</span>
                 </div>
               </div>
               <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-full font-semibold mb-3 transition-colors">
