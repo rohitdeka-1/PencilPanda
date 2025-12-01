@@ -1,6 +1,8 @@
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import ProductReviews from '../components/ProductReviews';
+import ProductCard from '../components/ProductCard';
 
 const productData = {
   1: {
@@ -25,6 +27,37 @@ const productData = {
     features: ['Soft ambient lighting', 'Energy efficient LED', 'Adorable design', 'Perfect for kids rooms']
   }
 };
+
+const recommendedProducts = [
+  { 
+    id: 3, 
+    name: 'Educational Puzzle Set', 
+    price: '19.99', 
+    image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=400&h=400&fit=crop',
+    category: 'toys' 
+  },
+  { 
+    id: 4, 
+    name: 'Learning Alphabet Blocks', 
+    price: '15.99', 
+    image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=400&h=400&fit=crop',
+    category: 'toys' 
+  },
+  { 
+    id: 5, 
+    name: 'Kids Drawing Book', 
+    price: '8.99', 
+    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&h=400&fit=crop',
+    category: 'books' 
+  },
+  { 
+    id: 6, 
+    name: 'Colorful Crayons Set', 
+    price: '12.50', 
+    image: 'https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=400&h=400&fit=crop',
+    category: 'accessories' 
+  }
+];
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -123,6 +156,21 @@ const ProductDetail = () => {
             </button>
           </div>
         </div>
+
+        {/* Product Reviews */}
+        <ProductReviews productId={id} />
+
+        {/* Recommended Products */}
+        <section className="mt-12 md:mt-16">
+          <h2 className="text-2xl md:text-3xl engagement-regular text-purple-700 mb-6 text-center">
+            You May Also Like
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {recommendedProducts.map((product) => (
+              <ProductCard key={product.id} {...product} />
+            ))}
+          </div>
+        </section>
 
         <section className="mt-12 md:mt-16 bg-cyan-100 rounded-3xl p-6 md:p-8">
           <h2 className="text-2xl md:text-3xl font-bold text-purple-900 mb-4 text-center">

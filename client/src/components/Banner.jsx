@@ -3,11 +3,15 @@ const Banner = ({ text, buttonText, bgImage, bgColor = 'bg-gradient-to-r from-pu
     <div className={`relative ${!bgImage && bgColor} h-[120px] md:h-[150px] flex items-center shadow-md overflow-hidden`}>
       {/* Background Image */}
       {bgImage && (
-        <img 
-          src={bgImage} 
-          alt="Banner" 
-          className="absolute top-0 left-0 w-full h-full object-cover"
-        />
+        <>
+          <img 
+            src={bgImage} 
+            alt="Banner" 
+            className="absolute top-0 left-0 w-full h-full object-cover"
+          />
+          {/* Dark overlay for better text visibility */}
+          <div className="absolute inset-0 bg-black/50"></div>
+        </>
       )}
       
       {/* Content */}

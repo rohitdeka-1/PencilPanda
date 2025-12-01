@@ -37,7 +37,7 @@ const CookieConsent = () => {
             <p className="text-gray-600 text-sm md:text-base">
               We use cookies only for authentication purposes to keep you logged in and provide a secure shopping experience. 
               By clicking "Accept", you agree to our use of cookies. Learn more in our{' '}
-              <Link to="/privacy-policy" className="text-purple-600 hover:text-purple-700 underline">
+              <Link to="/privacy" className="text-purple-600 hover:text-purple-700 underline">
                 Privacy Policy
               </Link>.
             </p>

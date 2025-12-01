@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import CookieConsent from './components/CookieConsent';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Collections from './pages/Collections';
 import ProductDetail from './pages/ProductDetail';
@@ -17,6 +18,7 @@ import FAQ from './pages/FAQ';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50">
         <Navbar />
         <main>

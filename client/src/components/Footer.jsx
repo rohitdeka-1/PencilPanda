@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Instagram, Facebook, Youtube, MessageCircle } from 'lucide-react';
+import { Instagram, Youtube, MessageCircle } from 'lucide-react';
 import logo from '../a1ssets/logo.png';
 
 const Footer = () => {
@@ -73,15 +73,6 @@ const Footer = () => {
                 aria-label="Instagram"
               >
                 <Instagram size={24} strokeWidth={1.5} />
-              </a>
-              <a 
-                href="https://facebook.com/pencilpandaofficial" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-600 transition-colors"
-                aria-label="Facebook"
-              >
-                <Facebook size={24} strokeWidth={1.5} />
               </a>
               <a 
                 href="https://youtube.com/@pencilpandaofficial" 

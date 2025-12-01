@@ -24,16 +24,11 @@ const Home = () => {
       <HeroCarousel />
 
       <section className="px-4 py-8 md:py-12 max-w-7xl mx-auto">
-        <div className="flex items-center justify-between mb-6">
-          <button className="p-2 hover:bg-purple-100 rounded-full transition-colors">
-            <ChevronLeft className="w-6 h-6 text-purple-700" />
-          </button>
+        <div className="flex items-center justify-center mb-6">
+          
           <h2 className="text-3xl md:text-4xl engagement-regular text-purple-700 text-center">
             Shop our collections
           </h2>
-          <button className="p-2 hover:bg-purple-100 rounded-full transition-colors">
-            <ChevronRight className="w-6 h-6 text-purple-700" />
-          </button>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
