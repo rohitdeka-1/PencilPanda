@@ -1,0 +1,19 @@
+import dotenv from "dotenv";
+dotenv.config();
+
+const envConfig = {
+    FRONTEND: process.env.FRONTEND || process.env.FRONT_END,
+    PORT: process.env.PORT || 5000,
+    MONGO_URI: process.env.MONGO_URI || process.env.MONGODB_URI,
+    ACCESS_TOKEN: process.env.ACCESS_TOKEN || process.env.JWT_SECRET,
+    REFRESH_TOKEN: process.env.REFRESH_TOKEN, 
+    GOOGLE_APP_GMAIL: process.env.GOOGLE_APP_GMAIL || process.env.EMAIL_USER,
+    GOOGLE_APP_PASSWORD: process.env.GOOGLE_APP_PASSWORD || process.env.EMAIL_PASS,
+    UPSTASH_REDIS_URL: process.env.UPSTASH_REDIS_URL,
+    CLOUDI_CLOUD_NAME: process.env.CLOUDINARY_CLOUD_NAME,
+	CLOUDI_API_KEY: process.env.CLOUDINARY_API_KEY,
+	CLOUDI_API_SECRET: process.env.CLOUDINARY_API_SECRET,
+    GPAY_MERCHANT_ID: process.env.GPAY_MERCHANT_ID, // GPay UPI ID for QR code generation
+}
+
+export default envConfig;

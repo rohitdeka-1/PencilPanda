@@ -20,4 +20,5 @@ const ProductCard = ({ id, name, price, image, bgColor = 'bg-pink-100' }) => {
   );
 };
 
+
 export default ProductCard;
