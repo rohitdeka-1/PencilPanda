@@ -7,13 +7,13 @@ const RefundPolicy = () => {
       <div className="max-w-4xl mx-auto">
         <Link 
           to="/" 
-          className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-800 mb-6 font-semibold transition-colors"
+          className="inline-flex items-center gap-2 text-[#3e0053] hover:text-[#3e0053] mb-6 font-semibold transition-colors"
         >
           <Home size={20} />
           <span>Home</span>
         </Link>
         
-        <h1 className="text-3xl md:text-4xl engagement-regular text-purple-700 mb-8 text-center">
+        <h1 className="text-3xl md:text-4xl engagement-regular text-[#3e0053] mb-8 text-center">
           Refund & Replacement Policy
         </h1>
         
@@ -23,7 +23,7 @@ const RefundPolicy = () => {
           </p>
 
           <section>
-            <h2 className="text-lg md:text-xl font-bold text-purple-700 mb-3">4.1 Refund Policy</h2>
+            <h2 className="text-lg md:text-xl font-bold text-[#3e0053] mb-3">4.1 Refund Policy</h2>
             <p className="text-sm md:text-base text-gray-700 mb-3"><strong>Refunds are provided only if:</strong></p>
             <ul className="list-disc list-inside space-y-2 text-sm md:text-base text-gray-700 ml-4">
               <li>You received a damaged product</li>
@@ -36,10 +36,20 @@ const RefundPolicy = () => {
               <li>Delay by courier</li>
               <li>Incorrect address provided</li>
             </ul>
+            <p className="text-sm md:text-base text-gray-700 mt-4 font-semibold">
+              Approved refunds will be credited to your original payment method within 7 working days.
+            </p>
           </section>
 
           <section>
-            <h2 className="text-lg md:text-xl font-bold text-purple-700 mb-3">4.2 Mandatory Unboxing Video</h2>
+            <h2 className="text-lg md:text-xl font-bold text-[#3e0053] mb-3">4.2 Return Window</h2>
+            <p className="text-sm md:text-base text-gray-700">
+              Returns will be acceptable within 7 days of delivery. Please ensure you raise a return request within this period.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-lg md:text-xl font-bold text-[#3e0053] mb-3">4.3 Mandatory Unboxing Video</h2>
             <p className="text-sm md:text-base text-gray-700 mb-3">To claim refund/replacement:</p>
             <ul className="list-disc list-inside space-y-2 text-sm md:text-base text-gray-700 ml-4">
               <li>You MUST provide a full unboxing video</li>
@@ -52,14 +62,14 @@ const RefundPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-lg md:text-xl font-bold text-purple-700 mb-3">4.3 Replacement</h2>
+            <h2 className="text-lg md:text-xl font-bold text-[#3e0053] mb-3">4.4 Replacement & Exchange</h2>
             <p className="text-sm md:text-base text-gray-700">
-              If approved, we provide a free replacement within 2–3 days of claim approval.
+              If approved, your order will be exchanged and the replacement will be delivered within 7 working days of claim approval.
             </p>
           </section>
 
           <section>
-            <h2 className="text-lg md:text-xl font-bold text-purple-700 mb-3">4.4 Non-Returnable Items</h2>
+            <h2 className="text-lg md:text-xl font-bold text-[#3e0053] mb-3">4.5 Non-Returnable Items</h2>
             <p className="text-sm md:text-base text-gray-700 mb-3">For hygiene & safety reasons, the following cannot be returned:</p>
             <ul className="list-disc list-inside space-y-2 text-sm md:text-base text-gray-700 ml-4">
               <li>Stationery items</li>
@@ -70,7 +80,7 @@ const RefundPolicy = () => {
           </section>
 
           <section>
-            <h2 className="text-lg md:text-xl font-bold text-purple-700 mb-3">5. Warranty Policy</h2>
+            <h2 className="text-lg md:text-xl font-bold text-[#3e0053] mb-3">5. Warranty Policy</h2>
             <p className="text-sm md:text-base text-gray-700">
               Since Pencil Panda sells stationery and non-electronic items:
             </p>

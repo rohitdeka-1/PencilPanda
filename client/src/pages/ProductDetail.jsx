@@ -1,7 +1,8 @@
 import { useParams } from 'react-router-dom';
 import { useState } from 'react';
-import { ChevronLeft, ChevronRight, Share2, Truck, Package, Shield, ChevronDown } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Share2, Truck, Package, Shield, ChevronDown, Star } from 'lucide-react';
 import ProductCard from '../components/ProductCard';
+import Breadcrumb from '../components/Breadcrumb';
 
 const productData = {
   1: {
@@ -39,7 +40,56 @@ Safe for children of all ages, Ricejagger meets all international safety standar
       'Age Range': '0+ months',
       'Care': 'Machine washable',
       'Origin': 'Designed in UK'
-    }
+    },
+    rating: 4.8,
+    reviewCount: 127,
+    reviews: [
+      {
+        id: 1,
+        name: 'Priya Sharma',
+        date: 'November 15, 2025',
+        rating: 5,
+        title: 'My daughter absolutely loves it!',
+        comment: 'Ricejagger has become my 3-year-old\'s favorite companion. The quality is exceptional and it\'s so soft and cuddly. She takes it everywhere - even to bed! Highly recommend for kids.',
+        verified: true
+      },
+      {
+        id: 2,
+        name: 'Rajesh Kumar',
+        date: 'November 8, 2025',
+        rating: 5,
+        title: 'Perfect gift for kids',
+        comment: 'Bought this as a birthday gift for my nephew and he hasn\'t let go of it since! The plush material is very soft and the design is adorable. Great quality for the price.',
+        verified: true
+      },
+      {
+        id: 3,
+        name: 'Anjali Patel',
+        date: 'October 28, 2025',
+        rating: 4,
+        title: 'Great quality, vibrant colors',
+        comment: 'Very pleased with this purchase. The toy is well-made and the colors are even more vibrant than in the photos. My son carries it around the house. Only minor issue is it\'s slightly smaller than I expected, but still worth it!',
+        verified: true
+      },
+      {
+        id: 4,
+        name: 'Amit Verma',
+        date: 'October 20, 2025',
+        rating: 5,
+        title: 'Excellent quality and fast delivery',
+        comment: 'This plush toy exceeded my expectations. The stitching is strong, material is premium quality, and it arrived within 3 days! My daughter (2 years old) loves it. Will definitely order more products from Pencil Panda.',
+        verified: true
+      },
+      {
+        id: 5,
+        name: 'Sneha Reddy',
+        date: 'October 12, 2025',
+        rating: 5,
+        title: 'Adorable and well-made!',
+        comment: 'Such a cute plush toy! The quality is amazing and it\'s machine washable which is a huge plus. My kids fight over who gets to cuddle with it. 😊',
+        verified: true
+      }
+    ]
   },
   2: {
     name: 'Coding Robot Kit',
@@ -70,7 +120,29 @@ Safe for children of all ages, Ricejagger meets all international safety standar
       'Age Range': '6+ years',
       'Battery': 'Rechargeable Li-ion',
       'Connectivity': 'Bluetooth 5.0'
-    }
+    },
+    rating: 4.6,
+    reviewCount: 89,
+    reviews: [
+      {
+        id: 1,
+        name: 'Vikram Singh',
+        date: 'November 10, 2025',
+        rating: 5,
+        title: 'Perfect for learning coding!',
+        comment: 'My 8-year-old son is learning so much with this robot kit. The interface is easy to understand and the learning guide is very helpful. Great investment for his future!',
+        verified: true
+      },
+      {
+        id: 2,
+        name: 'Meera Joshi',
+        date: 'October 25, 2025',
+        rating: 4,
+        title: 'Educational and fun',
+        comment: 'My kids love playing with this robot. It teaches them coding basics in a fun way. Battery life is good too. Would give 5 stars if it had more advanced features.',
+        verified: true
+      }
+    ]
   }
 };
 
@@ -88,6 +160,53 @@ const ProductDetail = () => {
   const [quantity, setQuantity] = useState(1);
   const [shippingOpen, setShippingOpen] = useState(false);
   const [descriptionOpen, setDescriptionOpen] = useState(true);
+  const [reviewsOpen, setReviewsOpen] = useState(true);
+  const [showReviewForm, setShowReviewForm] = useState(false);
+  const [newReview, setNewReview] = useState({ name: '', rating: 5, title: '', comment: '' });
+
+  // Map product types to collection routes
+  const getCollectionRoute = (type) => {
+    const typeMap = {
+      'Plush Toy': '/collections/toys',
+      'Educational Toy': '/collections/toys',
+      'Music Mobile': '/collections/toys',
+      'Rattle Set': '/collections/toys',
+      'Teether': '/collections/toys',
+      'Notebook Set': '/collections/stationery',
+      'Pen Collection': '/collections/stationery',
+      'Sticker Pack': '/collections/stationery',
+      'Washi Tape': '/collections/stationery',
+      'Keychain': '/collections/accessories',
+      'Phone Case': '/collections/accessories',
+      'Tote Bag': '/collections/accessories',
+      'Pin Set': '/collections/accessories'
+    };
+    return typeMap[type] || '/collections/all';
+  };
+
+  const StarRating = ({ rating, size = 'w-5 h-5' }) => {
+    return (
+      <div className="flex gap-1">
+        {[1, 2, 3, 4, 5].map((star) => (
+          <Star
+            key={star}
+            className={`${size} ${
+              star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'
+            }`}
+          />
+        ))}
+      </div>
+    );
+  };
+
+  const handleReviewSubmit = (e) => {
+    e.preventDefault();
+    // Here you would typically send the review to your backend
+    console.log('Review submitted:', newReview);
+    setShowReviewForm(false);
+    setNewReview({ name: '', rating: 5, title: '', comment: '' });
+    alert('Thank you for your review! It will be published after moderation.');
+  };
 
   const handleShare = async () => {
     if (navigator.share) {
@@ -110,6 +229,13 @@ const ProductDetail = () => {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 py-6 md:py-12">
+        {/* Breadcrumb Navigation */}
+        <Breadcrumb items={[
+          { label: 'Collections', link: '/collections/all' },
+          { label: product.type || 'Product', link: getCollectionRoute(product.type) },
+          { label: product.name }
+        ]} />
+        
         {/* Main Product Section */}
         <div className="grid md:grid-cols-2 gap-8 lg:gap-12 mb-12">
           {/* Image Gallery */}
@@ -309,6 +435,141 @@ const ProductDetail = () => {
                   ))}
                 </div>
               </div>
+            </div>
+          )}
+        </div>
+
+        {/* Customer Reviews Section */}
+        <div className="mb-12 border-t border-gray-200 pt-8">
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <h2 className="text-2xl font-bold text-[#310053] mb-2">Customer Reviews</h2>
+              <div className="flex items-center gap-3">
+                <StarRating rating={Math.round(product.rating)} />
+                <span className="text-lg font-semibold text-[#310053]">{product.rating} out of 5</span>
+                <span className="text-gray-500">({product.reviewCount} reviews)</span>
+              </div>
+            </div>
+            <button
+              onClick={() => setShowReviewForm(!showReviewForm)}
+              className="bg-[#630090] hover:bg-[#4a006b] text-white px-6 py-2 rounded-full font-semibold transition-colors"
+            >
+              Write a Review
+            </button>
+          </div>
+
+          {/* Review Form */}
+          {showReviewForm && (
+            <div className="mb-8 p-6 bg-[#ffefec] rounded-2xl animate-slideInLeft">
+              <h3 className="text-xl font-bold text-[#310053] mb-4">Write Your Review</h3>
+              <form onSubmit={handleReviewSubmit} className="space-y-4">
+                <div>
+                  <label className="block text-sm font-medium text-[#310053] mb-2">Your Name *</label>
+                  <input
+                    type="text"
+                    required
+                    value={newReview.name}
+                    onChange={(e) => setNewReview({ ...newReview, name: e.target.value })}
+                    className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-[#630090] focus:outline-none"
+                    placeholder="Enter your name"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-[#310053] mb-2">Rating *</label>
+                  <div className="flex gap-2">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <button
+                        key={star}
+                        type="button"
+                        onClick={() => setNewReview({ ...newReview, rating: star })}
+                        className="transition-transform hover:scale-110"
+                      >
+                        <Star
+                          className={`w-8 h-8 ${
+                            star <= newReview.rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'
+                          }`}
+                        />
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-[#310053] mb-2">Review Title *</label>
+                  <input
+                    type="text"
+                    required
+                    value={newReview.title}
+                    onChange={(e) => setNewReview({ ...newReview, title: e.target.value })}
+                    className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-[#630090] focus:outline-none"
+                    placeholder="Sum up your experience"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-[#310053] mb-2">Your Review *</label>
+                  <textarea
+                    required
+                    value={newReview.comment}
+                    onChange={(e) => setNewReview({ ...newReview, comment: e.target.value })}
+                    rows="4"
+                    className="w-full px-4 py-2 border-2 border-gray-200 rounded-lg focus:border-[#630090] focus:outline-none resize-none"
+                    placeholder="Share your experience with this product"
+                  ></textarea>
+                </div>
+
+                <div className="flex gap-3">
+                  <button
+                    type="submit"
+                    className="bg-[#630090] hover:bg-[#4a006b] text-white px-6 py-2 rounded-full font-semibold transition-colors"
+                  >
+                    Submit Review
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setShowReviewForm(false)}
+                    className="bg-white hover:bg-gray-50 text-[#310053] border-2 border-[#310053] px-6 py-2 rounded-full font-semibold transition-colors"
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </form>
+            </div>
+          )}
+
+          {/* Reviews List */}
+          <button
+            onClick={() => setReviewsOpen(!reviewsOpen)}
+            className="flex items-center justify-between w-full text-left mb-4"
+          >
+            <h3 className="text-xl font-semibold text-[#310053]">All Reviews ({product.reviewCount})</h3>
+            <ChevronDown className={`w-6 h-6 text-[#310053] transition-transform ${reviewsOpen ? 'rotate-180' : ''}`} />
+          </button>
+
+          {reviewsOpen && (
+            <div className="space-y-6">
+              {product.reviews.map((review) => (
+                <div key={review.id} className="border-b border-gray-200 pb-6 last:border-b-0 hover:bg-gray-50 p-4 rounded-lg transition-all">
+                  <div className="flex items-start justify-between mb-3">
+                    <div>
+                      <div className="flex items-center gap-3 mb-1">
+                        <h4 className="font-semibold text-[#310053]">{review.name}</h4>
+                        {review.verified && (
+                          <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full font-medium">
+                            ✓ Verified Purchase
+                          </span>
+                        )}
+                      </div>
+                      <p className="text-sm text-gray-500">{review.date}</p>
+                    </div>
+                    <StarRating rating={review.rating} size="w-4 h-4" />
+                  </div>
+                  
+                  <h5 className="font-semibold text-[#310053] mb-2">{review.title}</h5>
+                  <p className="text-[#310053] leading-relaxed">{review.comment}</p>
+                </div>
+              ))}
             </div>
           )}
         </div>

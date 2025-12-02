@@ -70,7 +70,7 @@ const ProductReviews = ({ productId }) => {
       <div className="bg-white rounded-3xl shadow-lg p-6 md:p-8 mb-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 mb-6">
           <div className="text-center md:text-left">
-            <h2 className="text-2xl md:text-3xl font-bold text-purple-900 mb-2">
+            <h2 className="text-2xl md:text-3xl font-bold text-[#3e0053] mb-2">
               Customer Reviews
             </h2>
             <div className="flex items-center gap-2 justify-center md:justify-start">
@@ -83,7 +83,7 @@ const ProductReviews = ({ productId }) => {
                   />
                 ))}
               </div>
-              <span className="text-2xl font-bold text-purple-900">{averageRating}</span>
+              <span className="text-2xl font-bold text-[#3e0053]">{averageRating}</span>
               <span className="text-gray-600">({reviews.length} reviews)</span>
             </div>
           </div>
@@ -98,7 +98,7 @@ const ProductReviews = ({ productId }) => {
         {/* Review Form */}
         {showReviewForm && (
           <form onSubmit={handleSubmitReview} className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 mb-6">
-            <h3 className="text-xl font-bold text-purple-900 mb-4">Share Your Experience</h3>
+            <h3 className="text-xl font-bold text-[#3e0053] mb-4">Share Your Experience</h3>
             <div className="space-y-4">
               <div>
                 <label className="block text-gray-700 font-semibold mb-2">Your Name</label>
@@ -165,7 +165,7 @@ const ProductReviews = ({ productId }) => {
           <div key={review.id} className="bg-white rounded-2xl shadow-md p-6">
             <div className="flex items-start justify-between mb-3">
               <div>
-                <h4 className="font-bold text-purple-900">{review.userName}</h4>
+                <h4 className="font-bold text-[#3e0053]">{review.userName}</h4>
                 <p className="text-sm text-gray-500">{new Date(review.date).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}</p>
               </div>
               <div className="flex">
@@ -181,7 +181,7 @@ const ProductReviews = ({ productId }) => {
             <p className="text-gray-700 mb-3">{review.comment}</p>
             <button
               onClick={() => handleHelpful(review.id)}
-              className="flex items-center gap-2 text-gray-600 hover:text-purple-600 transition-colors"
+              className="flex items-center gap-2 text-gray-600 hover:text-[#3e0053] transition-colors"
             >
               <ThumbsUp size={16} />
               <span className="text-sm">Helpful ({review.helpful})</span>
@@ -195,7 +195,7 @@ const ProductReviews = ({ productId }) => {
         <div className="text-center mt-6">
           <button
             onClick={() => setShowAllReviews(!showAllReviews)}
-            className="bg-gradient-to-r from-purple-100 to-pink-100 hover:from-purple-200 hover:to-pink-200 text-purple-700 px-8 py-3 rounded-full font-semibold transition-all"
+            className="bg-gradient-to-r from-purple-100 to-pink-100 hover:from-purple-200 hover:to-pink-200 text-[#3e0053] px-8 py-3 rounded-full font-semibold transition-all"
           >
             {showAllReviews ? 'Show Less' : `View All ${reviews.length} Reviews`}
           </button>

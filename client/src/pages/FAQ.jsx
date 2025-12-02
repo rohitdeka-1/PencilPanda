@@ -65,7 +65,7 @@ const FAQ = () => {
       <div className="max-w-4xl mx-auto px-4">
         <Link 
           to="/" 
-          className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-800 mb-6 font-semibold transition-colors"
+          className="inline-flex items-center gap-2 text-[#3e0053] hover:text-[#3e0053] mb-6 font-semibold transition-colors"
         >
           <Home size={20} />
           <span>Back to Home</span>
@@ -73,7 +73,7 @@ const FAQ = () => {
         
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl engagement-regular text-purple-700 mb-4">
+          <h1 className="text-4xl md:text-5xl engagement-regular text-[#3e0053] mb-4">
             Frequently Asked Questions
           </h1>
           <p className="text-gray-600 text-lg">
@@ -96,7 +96,7 @@ const FAQ = () => {
                   {faq.question}
                 </h3>
                 {openIndex === index ? (
-                  <ChevronUp className="text-purple-600 flex-shrink-0" size={24} />
+                  <ChevronUp className="text-[#3e0053] flex-shrink-0" size={24} />
                 ) : (
                   <ChevronDown className="text-gray-400 flex-shrink-0" size={24} />
                 )}
@@ -114,7 +114,7 @@ const FAQ = () => {
         </div>
 
         <div className="mt-12 text-center bg-gradient-to-r from-purple-100 via-pink-100 to-blue-100 rounded-lg p-8">
-          <h3 className="text-2xl engagement-regular text-purple-700 mb-3">
+          <h3 className="text-2xl engagement-regular text-[#3e0053] mb-3">
             Still have questions?
           </h3>
           <p className="text-gray-700 mb-4">
@@ -123,7 +123,7 @@ const FAQ = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:support@pencilpanda.in"
-              className="px-6 py-3 bg-white text-purple-700 font-semibold rounded-lg hover:shadow-lg transition-shadow"
+              className="px-6 py-3 bg-white text-[#3e0053] font-semibold rounded-lg hover:shadow-lg transition-shadow"
             >
               Email Us
             </a>

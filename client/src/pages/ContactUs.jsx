@@ -7,13 +7,13 @@ const ContactUs = () => {
       <div className="max-w-4xl mx-auto">
         <Link 
           to="/" 
-          className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-800 mb-6 font-semibold transition-colors"
+          className="inline-flex items-center gap-2 text-[#3e0053] hover:text-[#3e0053] mb-6 font-semibold transition-colors"
         >
           <Home size={20} />
           <span>Home</span>
         </Link>
         
-        <h1 className="text-4xl md:text-5xl engagement-regular text-purple-700 mb-8 text-center">
+        <h1 className="text-4xl md:text-5xl engagement-regular text-[#3e0053] mb-8 text-center">
           Contact Us
         </h1>
         
@@ -24,25 +24,25 @@ const ContactUs = () => {
 
           <div className="space-y-6">
             <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6">
-              <h3 className="text-xl font-bold text-purple-700 mb-4 flex items-center gap-2">
+              <h3 className="text-xl font-bold text-[#3e0053] mb-4 flex items-center gap-2">
                 <span className="text-2xl">📧</span> Email
               </h3>
-              <a href="mailto:support@pencilpanda.in" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">
+              <a href="mailto:support@pencilpanda.in" className="text-gray-700 hover:text-[#3e0053] transition-colors text-lg">
                 support@pencilpanda.in
               </a>
             </div>
 
             <div className="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-6">
-              <h3 className="text-xl font-bold text-purple-700 mb-4 flex items-center gap-2">
+              <h3 className="text-xl font-bold text-[#3e0053] mb-4 flex items-center gap-2">
                 <span className="text-2xl">📞</span> Phone
               </h3>
-              <a href="tel:8420514587" className="text-gray-700 hover:text-purple-600 transition-colors text-lg">
+              <a href="tel:8420514587" className="text-gray-700 hover:text-[#3e0053] transition-colors text-lg">
                 +91 8420514587
               </a>
             </div>
 
             <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-2xl p-6">
-              <h3 className="text-xl font-bold text-purple-700 mb-4 flex items-center gap-2">
+              <h3 className="text-xl font-bold text-[#3e0053] mb-4 flex items-center gap-2">
                 <span className="text-2xl">📍</span> Address
               </h3>
               <p className="text-gray-700 text-lg">
@@ -54,7 +54,7 @@ const ContactUs = () => {
             </div>
 
             <div className="bg-gradient-to-br from-orange-50 to-yellow-50 rounded-2xl p-6">
-              <h3 className="text-xl font-bold text-purple-700 mb-4 flex items-center gap-2">
+              <h3 className="text-xl font-bold text-[#3e0053] mb-4 flex items-center gap-2">
                 <span className="text-2xl">🕒</span> Working Hours
               </h3>
               <p className="text-gray-700 text-lg">

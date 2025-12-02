@@ -110,7 +110,7 @@ const Account = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-purple-50 to-pink-50">
       <div className="max-w-md mx-auto px-4 py-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-purple-900 mb-8 text-center">
+        <h1 className="text-3xl md:text-4xl font-bold text-[#3e0053] mb-8 text-center">
           My Account
         </h1>
 

@@ -7,13 +7,13 @@ const TermsAndConditions = () => {
       <div className="max-w-4xl mx-auto">
         <Link 
           to="/" 
-          className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-800 mb-6 font-semibold transition-colors"
+          className="inline-flex items-center gap-2 text-[#3e0053] hover:text-[#3e0053] mb-6 font-semibold transition-colors"
         >
           <Home size={20} />
           <span>Home</span>
         </Link>
         
-        <h1 className="text-3xl md:text-4xl engagement-regular text-purple-700 mb-8 text-center">
+        <h1 className="text-3xl md:text-4xl engagement-regular text-[#3e0053] mb-8 text-center">
           Terms & Conditions
         </h1>
         
@@ -23,7 +23,14 @@ const TermsAndConditions = () => {
           </p>
 
           <section>
-            <h2 className="text-lg md:text-xl font-bold text-purple-700 mb-3">1.1 Use of Website</h2>
+            <h2 className="text-lg md:text-xl font-bold text-[#3e0053] mb-3">Owner Information</h2>
+            <p className="text-sm md:text-base text-gray-700">
+              <strong>Owner Name:</strong> Rohit Deka
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-lg md:text-xl font-bold text-[#3e0053] mb-3">1.1 Use of Website</h2>
             <ul className="list-disc list-inside space-y-2 text-sm md:text-base text-gray-700 ml-4">
               <li>You agree not to misuse the website for unlawful, harmful, or unauthorized purposes.</li>
               <li>All images, product descriptions, logos, and designs are the property of Pencil Panda.</li>
@@ -32,7 +39,7 @@ const TermsAndConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-lg md:text-xl font-bold text-purple-700 mb-3">1.2 Eligibility</h2>
+            <h2 className="text-lg md:text-xl font-bold text-[#3e0053] mb-3">1.2 Eligibility</h2>
             <ul className="list-disc list-inside space-y-2 text-sm md:text-base text-gray-700 ml-4">
               <li>You must be at least 12 years old to place an order.</li>
               <li>If under 12, orders must be supervised by a parent/guardian.</li>
@@ -40,7 +47,7 @@ const TermsAndConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-lg md:text-xl font-bold text-purple-700 mb-3">1.3 Product Information & Pricing</h2>
+            <h2 className="text-lg md:text-xl font-bold text-[#3e0053] mb-3">1.3 Product Information & Pricing</h2>
             <p className="text-sm md:text-base text-gray-700 mb-3">We try our best to provide accurate product details, images, and pricing. However:</p>
             <ul className="list-disc list-inside space-y-2 text-sm md:text-base text-gray-700 ml-4">
               <li>Prices may change without notice due to supplier/freight changes</li>
@@ -49,7 +56,7 @@ const TermsAndConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-lg md:text-xl font-bold text-purple-700 mb-3">1.4 Order Acceptance</h2>
+            <h2 className="text-lg md:text-xl font-bold text-[#3e0053] mb-3">1.4 Order Acceptance</h2>
             <p className="text-sm md:text-base text-gray-700 mb-3">Your order is confirmed only after:</p>
             <ul className="list-disc list-inside space-y-2 text-sm md:text-base text-gray-700 ml-4">
               <li>Successful payment</li>
@@ -66,7 +73,7 @@ const TermsAndConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-lg md:text-xl font-bold text-purple-700 mb-3">1.5 Limitation of Liability</h2>
+            <h2 className="text-lg md:text-xl font-bold text-[#3e0053] mb-3">1.5 Limitation of Liability</h2>
             <p className="text-sm md:text-base text-gray-700 mb-3">Pencil Panda is not responsible for:</p>
             <ul className="list-disc list-inside space-y-2 text-sm md:text-base text-gray-700 ml-4">
               <li>Damages caused by misuse of products</li>
@@ -77,7 +84,7 @@ const TermsAndConditions = () => {
           </section>
 
           <section>
-            <h2 className="text-lg md:text-xl font-bold text-purple-700 mb-3">1.6 Governing Law</h2>
+            <h2 className="text-lg md:text-xl font-bold text-[#3e0053] mb-3">1.6 Governing Law</h2>
             <p className="text-sm md:text-base text-gray-700">
               These Terms follow Indian Laws under the Indian Contract Act, 1872.
             </p>

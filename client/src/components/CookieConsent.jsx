@@ -30,14 +30,14 @@ const CookieConsent = () => {
           <div className="flex-1">
             <div className="flex items-center gap-3 mb-3">
               <span className="text-4xl">🍪</span>
-              <h3 className="text-xl md:text-2xl engagement-regular text-purple-700">
+              <h3 className="text-xl md:text-2xl engagement-regular text-[#3e0053]">
                 We Use Cookies
               </h3>
             </div>
             <p className="text-gray-600 text-sm md:text-base">
               We use cookies only for authentication purposes to keep you logged in and provide a secure shopping experience. 
               By clicking "Accept", you agree to our use of cookies. Learn more in our{' '}
-              <Link to="/privacy" className="text-purple-600 hover:text-purple-700 underline">
+              <Link to="/privacy" className="text-[#3e0053] hover:text-[#3e0053] underline">
                 Privacy Policy
               </Link>.
             </p>
@@ -46,7 +46,7 @@ const CookieConsent = () => {
           <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto">
             <button
               onClick={declineCookies}
-              className="px-6 py-3 rounded-full border-2 border-purple-600 text-purple-600 font-semibold hover:bg-purple-50 transition-all"
+              className="px-6 py-3 rounded-full border-2 border-purple-600 text-[#3e0053] font-semibold hover:bg-purple-50 transition-all"
             >
               Decline
             </button>

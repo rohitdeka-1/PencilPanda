@@ -29,7 +29,7 @@ const Cart = () => {
     return (
       <div className="min-h-screen bg-white">
         <div className="max-w-7xl mx-auto px-4 py-12 text-center">
-          <h1 className="text-3xl md:text-4xl font-bold text-purple-900 mb-6">Your Cart</h1>
+          <h1 className="text-3xl md:text-4xl font-bold text-[#3e0053] mb-6">Your Cart</h1>
           <p className="text-gray-600 mb-8">Your cart is empty</p>
           <Link to="/" className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-semibold transition-colors">
             Continue Shopping
@@ -42,7 +42,7 @@ const Cart = () => {
   return (
     <div className="min-h-screen bg-white">
       <div className="max-w-7xl mx-auto px-4 py-6 md:py-12">
-        <h1 className="text-3xl md:text-4xl font-bold text-purple-900 mb-8">Your Cart</h1>
+        <h1 className="text-3xl md:text-4xl font-bold text-[#3e0053] mb-8">Your Cart</h1>
 
         <div className="grid lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-4">
@@ -52,8 +52,8 @@ const Cart = () => {
                   <div className="w-full h-full bg-white/30 rounded-xl"></div>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-semibold text-purple-900 mb-1">{item.name}</h3>
-                  <p className="text-purple-900 font-bold mb-2">₹{item.price.toFixed(2)}</p>
+                  <h3 className="font-semibold text-[#3e0053] mb-1">{item.name}</h3>
+                  <p className="text-[#3e0053] font-bold mb-2">₹{item.price.toFixed(2)}</p>
                   <div className="flex items-center gap-2">
                     <button 
                       onClick={() => updateQuantity(item.id, item.quantity - 1)}
@@ -82,7 +82,7 @@ const Cart = () => {
 
           <div className="lg:col-span-1">
             <div className="bg-purple-50 rounded-2xl p-6 sticky top-24">
-              <h2 className="text-xl font-bold text-purple-900 mb-4">Order Summary</h2>
+              <h2 className="text-xl font-bold text-[#3e0053] mb-4">Order Summary</h2>
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between">
                   <span className="text-gray-700">Subtotal</span>
@@ -93,14 +93,14 @@ const Cart = () => {
                   <span className="font-semibold">₹{shipping.toFixed(2)}</span>
                 </div>
                 <div className="border-t border-purple-200 pt-3 flex justify-between">
-                  <span className="font-bold text-purple-900 text-lg">Total</span>
-                  <span className="font-bold text-purple-900 text-lg">₹{total.toFixed(2)}</span>
+                  <span className="font-bold text-[#3e0053] text-lg">Total</span>
+                  <span className="font-bold text-[#3e0053] text-lg">₹{total.toFixed(2)}</span>
                 </div>
               </div>
               <button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-full font-semibold mb-3 transition-colors">
                 Checkout
               </button>
-              <Link to="/" className="block text-center text-purple-600 hover:text-purple-700 font-medium">
+              <Link to="/" className="block text-center text-[#3e0053] hover:text-[#3e0053] font-medium">
                 Continue Shopping
               </Link>
             </div>

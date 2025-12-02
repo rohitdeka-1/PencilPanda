@@ -12,7 +12,7 @@ const Footer = () => {
             {/* <span className="text-3xl"></span> */}
           </div>
           <div className="text-center md:text-left">
-            <p className="text-3xl engagement-regular text-purple-700">
+            <p className="text-3xl engagement-regular text-[#3e0053]">
               Pencil Panda
             </p>
             <p className="text-sm text-gray-600 mt-1">Educational Fun for Little Minds</p>
@@ -21,40 +21,40 @@ const Footer = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-5 gap-6 mb-8">
           <div>
-            <h4 className="font-bold text-purple-900 mb-3">Shop</h4>
+            <h4 className="font-bold text-[#3e0053] mb-3">Shop</h4>
             <ul className="space-y-2">
-              <li><Link to="/collections/all" className="text-gray-700 hover:text-purple-600 transition-colors">All Products</Link></li>
-              <li><Link to="/collections/toys" className="text-gray-700 hover:text-purple-600 transition-colors">Educational Toys</Link></li>
-              <li><Link to="/collections/books" className="text-gray-700 hover:text-purple-600 transition-colors">Tech Books</Link></li>
-              <li><Link to="/collections/accessories" className="text-gray-700 hover:text-purple-600 transition-colors">Learning Tools</Link></li>
+              <li><Link to="/collections/all" className="text-gray-700 hover:text-[#3e0053] transition-colors">All Products</Link></li>
+              <li><Link to="/collections/toys" className="text-gray-700 hover:text-[#3e0053] transition-colors">Educational Toys</Link></li>
+              <li><Link to="/collections/books" className="text-gray-700 hover:text-[#3e0053] transition-colors">Tech Books</Link></li>
+              <li><Link to="/collections/accessories" className="text-gray-700 hover:text-[#3e0053] transition-colors">Learning Tools</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-purple-900 mb-3">About</h4>
+            <h4 className="font-bold text-[#3e0053] mb-3">About</h4>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-gray-700 hover:text-purple-600 transition-colors">Our Story</Link></li>
-              <li><Link to="/contact-us" className="text-gray-700 hover:text-purple-600 transition-colors">Contact</Link></li>
+              <li><Link to="/about" className="text-gray-700 hover:text-[#3e0053] transition-colors">Our Story</Link></li>
+              <li><Link to="/contact-us" className="text-gray-700 hover:text-[#3e0053] transition-colors">Contact</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-purple-900 mb-3">Help</h4>
+            <h4 className="font-bold text-[#3e0053] mb-3">Help</h4>
             <ul className="space-y-2">
-              <li><Link to="/shipping" className="text-gray-700 hover:text-purple-600 transition-colors">Shipping Policy</Link></li>
-              <li><Link to="/refund" className="text-gray-700 hover:text-purple-600 transition-colors">Refund Policy</Link></li>
-              <li><Link to="/faq" className="text-gray-700 hover:text-purple-600 transition-colors">FAQ</Link></li>
+              <li><Link to="/shipping" className="text-gray-700 hover:text-[#3e0053] transition-colors">Shipping Policy</Link></li>
+              <li><Link to="/refund" className="text-gray-700 hover:text-[#3e0053] transition-colors">Refund Policy</Link></li>
+              <li><Link to="/faq" className="text-gray-700 hover:text-[#3e0053] transition-colors">FAQ</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-purple-900 mb-3">Legal</h4>
+            <h4 className="font-bold text-[#3e0053] mb-3">Legal</h4>
             <ul className="space-y-2">
-              <li><Link to="/terms" className="text-gray-700 hover:text-purple-600 transition-colors">Terms & Conditions</Link></li>
-              <li><Link to="/privacy" className="text-gray-700 hover:text-purple-600 transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/shipping" className="text-gray-700 hover:text-purple-600 transition-colors">Shipping Info</Link></li>
-              <li><Link to="/refund" className="text-gray-700 hover:text-purple-600 transition-colors">Refund Policy</Link></li>
+              <li><Link to="/terms" className="text-gray-700 hover:text-[#3e0053] transition-colors">Terms & Conditions</Link></li>
+              <li><Link to="/privacy" className="text-gray-700 hover:text-[#3e0053] transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/shipping" className="text-gray-700 hover:text-[#3e0053] transition-colors">Shipping Info</Link></li>
+              <li><Link to="/refund" className="text-gray-700 hover:text-[#3e0053] transition-colors">Refund Policy</Link></li>
             </ul>
           </div>
           <div>
-            <h4 className="font-bold text-purple-900 mb-3">Follow Us</h4>
+            <h4 className="font-bold text-[#3e0053] mb-3">Follow Us</h4>
             <div className="flex gap-4">
               <a 
                 href="https://wa.me/918420514587" 
