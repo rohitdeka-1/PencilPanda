@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import HeroCarousel from '../components/HeroCarousel';
 import CollectionCard from '../components/CollectionCard';
 import Banner from '../components/Banner';
@@ -49,7 +50,7 @@ const Home = () => {
       <section className="px-4 py-8 md:py-12 max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-6 mb-6">
           {/* Music Mobile Banner */}
-          <div className="rounded-3xl overflow-hidden shadow-lg">
+          <Link to="/product/2" className="rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 block">
             {/* Image Section */}
             <div className="bg-gradient-to-br from-[#84e4e2] to-[#a8ebea] p-8 flex items-center justify-center">
               <img 
@@ -70,10 +71,10 @@ const Home = () => {
                 Pre-order now!
               </button>
             </div>
-          </div>
+          </Link>
 
           {/* Noodoll Night Lights Banner */}
-          <div className="rounded-3xl overflow-hidden shadow-lg">
+          <Link to="/product/1" className="rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 block">
             {/* Image Section */}
             <div className="bg-gradient-to-br from-[#ffefec] to-[#ffe0db] p-8 flex items-center justify-center">
               <img 
@@ -94,7 +95,7 @@ const Home = () => {
                 Shop now
               </button>
             </div>
-          </div>
+          </Link>
         </div>
       </section>
 
