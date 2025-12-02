@@ -11,11 +11,11 @@ import axios from "axios";
 const generateTokens = (userId) => {
 
     const accessToken = jwt.sign({ userId }, process.env.ACCESS_TOKEN_SECRET, {
-        expiresIn: "1d", // 1 day for better UX
+        expiresIn: "10d", // 1 day for better UX
     });
 
     const refreshToken = jwt.sign({ userId }, process.env.REFRESH_TOKEN_SECRET, {
-        expiresIn: "15d", // 15 days
+        expiresIn: "30d", // 15 days
     });
 
     return { accessToken, refreshToken };

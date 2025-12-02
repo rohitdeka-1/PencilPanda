@@ -8,8 +8,8 @@ const slides = [
     subtitle: 'for your little ones!',
     description: 'Educational toys and books that inspire creativity',
     buttonText: 'Shop Educational Toys',
-    bgImage: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=1200&h=600&fit=crop',
-    buttonColor: 'bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700'
+    bgImage: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=1200&h=600&fit=crop',
+    buttonColor: 'bg-[#630090] hover:bg-[#4a006b]'
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const slides = [
     description: 'Explore coding, science & technology in fun ways',
     buttonText: 'Discover Books',
     bgImage: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&h=600&fit=crop',
-    buttonColor: 'bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700'
+    buttonColor: 'bg-[#630090] hover:bg-[#4a006b]'
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const slides = [
     description: 'Perfect educational gifts for every occasion',
     buttonText: 'Browse All',
     bgImage: 'https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=1200&h=600&fit=crop',
-    buttonColor: 'bg-gradient-to-r from-pink-600 to-purple-600 hover:from-pink-700 hover:to-purple-700'
+    buttonColor: 'bg-[#630090] hover:bg-[#4a006b]'
   }
 ];
 
@@ -55,7 +55,7 @@ const HeroCarousel = () => {
       >
         {slides.map((slide) => (
           <div key={slide.id} className="w-full flex-shrink-0">
-            <div className={`relative ${!slide.bgImage && slide.bgColor} h-[300px] md:h-[400px] lg:h-[450px] flex items-center justify-center overflow-hidden`}>
+            <div className={`relative ${!slide.bgImage && slide.bgColor} h-[250px] md:h-[320px] lg:h-[380px] flex items-center justify-center overflow-hidden`}>
               {/* Background Image */}
               {slide.bgImage && (
                 <>
@@ -65,22 +65,22 @@ const HeroCarousel = () => {
                     className="absolute top-0 left-0 w-full h-full object-cover"
                   />
                   {/* Dark overlay for better text readability */}
-                  <div className="absolute inset-0 bg-black/40"></div>
+                  <div className="absolute inset-0 bg-black/60"></div>
                 </>
               )}
               
               {/* Content */}
-              <div className="relative z-10 max-w-md mx-auto text-center px-4 py-12">
-                <h2 className="text-4xl md:text-5xl lg:text-6xl engagement-regular text-white mb-2 drop-shadow-lg">
+              <div className="relative z-10 max-w-md mx-auto text-center px-4 py-8">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl engagement-regular text-white mb-2 drop-shadow-lg">
                   {slide.title}
                 </h2>
-                <h3 className="text-4xl md:text-5xl lg:text-6xl engagement-regular text-white/90 mb-4 drop-shadow-lg">
+                <h3 className="text-3xl md:text-4xl lg:text-5xl engagement-regular text-white/90 mb-3 drop-shadow-lg">
                   {slide.subtitle}
                 </h3>
-                <p className="text-white/90 text-lg md:text-xl mb-6 drop-shadow-md">
+                <p className="text-white/90 text-base md:text-lg mb-5 drop-shadow-md">
                   {slide.description}
                 </p>
-                <button className={`${slide.buttonColor} text-white px-8 py-3 rounded-full text-lg font-semibold transition-colors shadow-lg`}>
+                <button className={`${slide.buttonColor} text-white px-6 py-2.5 rounded-full text-base font-semibold transition-colors shadow-lg`}>
                   {slide.buttonText}
                 </button>
               </div>
@@ -91,15 +91,15 @@ const HeroCarousel = () => {
 
       <button 
         onClick={prevSlide}
-        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-2 rounded-full shadow-xl transition-all hover:scale-110"
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-1.5 rounded-full shadow-lg transition-all"
       >
-        <ChevronLeft className="w-6 h-6 text-purple-700" />
+        <ChevronLeft className="w-5 h-5 text-[#310053]" />
       </button>
       <button 
         onClick={nextSlide}
-        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white p-2 rounded-full shadow-xl transition-all hover:scale-110"
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-1.5 rounded-full shadow-lg transition-all"
       >
-        <ChevronRight className="w-6 h-6 text-purple-700" />
+        <ChevronRight className="w-5 h-5 text-[#310053]" />
       </button>
 
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">

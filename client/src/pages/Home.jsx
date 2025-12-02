@@ -2,20 +2,21 @@ import HeroCarousel from '../components/HeroCarousel';
 import CollectionCard from '../components/CollectionCard';
 import Banner from '../components/Banner';
 import ProductCard from '../components/ProductCard';
+import FeaturedProductBanner from '../components/FeaturedProductBanner';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const collections = [
-  { id: 1, title: 'Educational Toys', link: '/collections/toys', bgColor: 'bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-300 via-pink-300 to-purple-400', image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=400&h=400&fit=crop' },
-  { id: 2, title: 'Tech Books', link: '/collections/books', bgColor: 'bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-300 via-cyan-300 to-blue-400', image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=400&fit=crop' },
-  { id: 3, title: 'STEM Kits', link: '/collections/stem', bgColor: 'bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-green-300 via-teal-300 to-green-400', image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop' },
-  { id: 4, title: 'Learning Tools', link: '/collections/tools', bgColor: 'bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-orange-300 via-yellow-300 to-orange-400', image: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=400&h=400&fit=crop' }
+  { id: 1, title: 'Educational Toys', link: '/collections/toys', bgColor: 'bg-gradient-to-br from-[#ffefec] to-[#ffd9d4]', image: 'https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?w=400&h=400&fit=crop' },
+  { id: 2, title: 'Tech Books', link: '/collections/books', bgColor: 'bg-gradient-to-br from-[#004a85] to-[#0066b3]', image: 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=400&fit=crop' },
+  { id: 3, title: 'STEM Kits', link: '/collections/stem', bgColor: 'bg-gradient-to-br from-[#84e4e2] to-[#b8f0ef]', image: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop' },
+  { id: 4, title: 'Learning Tools', link: '/collections/tools', bgColor: 'bg-gradient-to-br from-[#c6898d] to-[#d4a1a5]', image: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=400&h=400&fit=crop' }
 ];
 
 const featuredProducts = [
-  { id: 1, name: 'Coding Robot Kit', price: '45.00', bgColor: 'bg-gradient-to-br from-blue-200 to-cyan-100', image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=400&fit=crop' },
-  { id: 2, name: 'Math Learning Blocks', price: '28.00', bgColor: 'bg-gradient-to-br from-pink-200 to-purple-100', image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=400&h=400&fit=crop' },
-  { id: 3, name: 'Science Explorer Set', price: '35.00', bgColor: 'bg-gradient-to-br from-green-200 to-teal-100', image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&h=400&fit=crop' },
-  { id: 4, name: 'Junior Tech Book Bundle', price: '32.00', bgColor: 'bg-gradient-to-br from-orange-200 to-yellow-100', image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&h=400&fit=crop' }
+  { id: 1, name: 'Coding Robot Kit', price: '45.00', bgColor: 'bg-gradient-to-br from-[#84e4e2] to-[#b8f0ef]', image: 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=400&fit=crop' },
+  { id: 2, name: 'Math Learning Blocks', price: '28.00', bgColor: 'bg-gradient-to-br from-[#ffefec] to-[#ffd9d4]', image: 'https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=400&h=400&fit=crop' },
+  { id: 3, name: 'Science Explorer Set', price: '35.00', bgColor: 'bg-gradient-to-br from-[#c6898d] to-[#d4a1a5]', image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=400&h=400&fit=crop' },
+  { id: 4, name: 'Junior Tech Book Bundle', price: '32.00', bgColor: 'bg-gradient-to-br from-[#004a85] to-[#0066b3]', image: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=400&h=400&fit=crop' }
 ];
 
 const Home = () => {
@@ -26,7 +27,7 @@ const Home = () => {
       <section className="px-4 py-8 md:py-12 max-w-7xl mx-auto">
         <div className="flex items-center justify-center mb-6">
           
-          <h2 className="text-3xl md:text-4xl engagement-regular text-purple-700 text-center">
+          <h2 className="text-2xl md:text-3xl engagement-regular text-[#310053] text-center">
             Shop our collections
           </h2>
         </div>
@@ -44,8 +45,61 @@ const Home = () => {
         bgImage="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=1200&h=300&fit=crop"
       />
 
+      {/* Featured Product Banners */}
       <section className="px-4 py-8 md:py-12 max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl engagement-regular text-purple-700 mb-6 text-center">
+        <div className="grid md:grid-cols-2 gap-6 mb-6">
+          {/* Music Mobile Banner */}
+          <div className="rounded-3xl overflow-hidden shadow-lg">
+            {/* Image Section */}
+            <div className="bg-gradient-to-br from-[#84e4e2] to-[#a8ebea] p-8 flex items-center justify-center">
+              <img 
+                src="https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?w=400&h=400&fit=crop" 
+                alt="Music mobile" 
+                className="w-full max-w-[250px] h-auto object-contain"
+              />
+            </div>
+            {/* Price Section - Darker shade */}
+            <div className="bg-gradient-to-br from-[#6dd4d2] to-[#84e4e2] p-6 text-center">
+              <h3 className="text-xl md:text-2xl font-semibold text-[#310053] mb-2">
+                Music mobile
+              </h3>
+              <p className="text-4xl md:text-5xl font-bold text-[#310053] mb-4">
+                $25.00
+              </p>
+              <button className="bg-[#630090] hover:bg-[#4a006b] text-white px-8 py-3 rounded-full font-semibold transition-colors">
+                Pre-order now!
+              </button>
+            </div>
+          </div>
+
+          {/* Noodoll Night Lights Banner */}
+          <div className="rounded-3xl overflow-hidden shadow-lg">
+            {/* Image Section */}
+            <div className="bg-gradient-to-br from-[#ffefec] to-[#ffe0db] p-8 flex items-center justify-center">
+              <img 
+                src="https://images.unsplash.com/photo-1558060370-d644479cb6f7?w=400&h=400&fit=crop" 
+                alt="Noodoll night lights" 
+                className="w-full max-w-[250px] h-auto object-contain"
+              />
+            </div>
+            {/* Price Section - Darker shade */}
+            <div className="bg-gradient-to-br from-[#ffd9d4] to-[#ffc8bf] p-6 text-center">
+              <h3 className="text-xl md:text-2xl font-semibold text-[#310053] mb-2">
+                New Noodoll night lights
+              </h3>
+              <p className="text-4xl md:text-5xl font-bold text-[#310053] mb-4">
+                $13.50
+              </p>
+              <button className="bg-[#630090] hover:bg-[#4a006b] text-white px-8 py-3 rounded-full font-semibold transition-colors">
+                Shop now
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-4 py-8 md:py-12 max-w-7xl mx-auto">
+        <h2 className="text-2xl md:text-3xl engagement-regular text-[#310053] mb-6 text-center">
           Featured Products
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
@@ -56,24 +110,24 @@ const Home = () => {
       </section>
 
       <div className="px-4 py-8 max-w-7xl mx-auto">
-        <div className="bg-gradient-to-br from-purple-200 via-pink-200 to-blue-200 rounded-3xl p-6 md:p-8 text-center shadow-xl">
+        <div className="bg-[#ccf5f5] rounded-2xl p-6 md:p-8 text-center">
           <div className="max-w-md mx-auto">
-            <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-purple-300 to-pink-300 rounded-full flex items-center justify-center shadow-lg">
-              <span className="text-3xl">🐼</span>
+            <div className="w-16 h-16 mx-auto mb-4 bg-white rounded-full flex items-center justify-center">
+              <span className="text-2xl">🐼</span>
             </div>
-            <h3 className="text-2xl md:text-3xl engagement-regular text-purple-700 mb-3">
+            <h3 className="text-xl md:text-2xl engagement-regular text-[#310053] mb-3">
               Join the Pencil Panda Family!
             </h3>
-            <p className="text-gray-700 mb-6">
+            <p className="text-[#310053] mb-6">
               Get parenting tips, educational content & exclusive offers for your kids
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <input 
                 type="email" 
                 placeholder="Enter your email"
-                className="flex-1 px-4 py-3 rounded-full border-2 border-purple-300 focus:border-purple-500 focus:outline-none shadow-sm"
+                className="flex-1 px-4 py-2.5 rounded-full border-2 border-[#310053] focus:border-[#630090] focus:outline-none"
               />
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-full font-semibold transition-all shadow-lg hover:shadow-xl transform hover:scale-105">
+              <button className="bg-[#630090] hover:bg-[#4a006b] text-white px-6 py-2.5 rounded-full font-semibold transition-colors">
                 Subscribe
               </button>
             </div>

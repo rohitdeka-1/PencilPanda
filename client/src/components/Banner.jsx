@@ -1,6 +1,6 @@
 const Banner = ({ text, buttonText, bgImage, bgColor = 'bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400', onButtonClick }) => {
   return (
-    <div className={`relative ${!bgImage && bgColor} h-[120px] md:h-[150px] flex items-center shadow-md overflow-hidden`}>
+    <div className={`relative ${!bgImage && bgColor} h-[100px] md:h-[150px] flex items-center shadow-md overflow-hidden`}>
       {/* Background Image */}
       {bgImage && (
         <>

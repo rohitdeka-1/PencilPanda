@@ -131,7 +131,7 @@ const Account = () => {
               onClick={() => setActiveTab('login')}
               className={`flex-1 py-3 rounded-full font-semibold transition-colors ${
                 activeTab === 'login'
-                  ? 'bg-purple-600 text-white'
+                  ? 'bg-[#630090] text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -141,7 +141,7 @@ const Account = () => {
               onClick={() => setActiveTab('signup')}
               className={`flex-1 py-3 rounded-full font-semibold transition-colors ${
                 activeTab === 'signup'
-                  ? 'bg-purple-600 text-white'
+                  ? 'bg-[#630090] text-white'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
@@ -159,7 +159,7 @@ const Account = () => {
                   type="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-full focus:border-purple-400 focus:outline-none"
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-full focus:border-[#630090] focus:outline-none"
                   placeholder="your@email.com"
                 />
               </div>
@@ -171,19 +171,19 @@ const Account = () => {
                   type="password"
                   name="password"
                   required
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-full focus:border-purple-400 focus:outline-none"
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-full focus:border-[#630090] focus:outline-none"
                   placeholder="••••••••"
                 />
               </div>
               <div className="text-right">
-                <a href="#" className="text-sm text-purple-600 hover:text-purple-700">
+                <a href="#" className="text-sm text-[#630090] hover:text-[#4a006b]">
                   Forgot password?
                 </a>
               </div>
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-full font-semibold transition-colors disabled:opacity-50"
+                className="w-full bg-[#630090] hover:bg-[#4a006b] text-white py-3 rounded-full font-semibold transition-colors disabled:opacity-50"
               >
                 {loading ? 'Loading...' : 'Login'}
               </button>
@@ -198,7 +198,7 @@ const Account = () => {
                   type="text"
                   name="name"
                   required
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-full focus:border-purple-400 focus:outline-none"
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-full focus:border-[#630090] focus:outline-none"
                   placeholder="Your name"
                 />
               </div>
@@ -210,7 +210,7 @@ const Account = () => {
                   type="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-full focus:border-purple-400 focus:outline-none"
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-full focus:border-[#630090] focus:outline-none"
                   placeholder="your@email.com"
                 />
               </div>
@@ -222,7 +222,7 @@ const Account = () => {
                   type="tel"
                   name="userPhone"
                   required
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-full focus:border-purple-400 focus:outline-none"
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-full focus:border-[#630090] focus:outline-none"
                   placeholder="Your phone number"
                 />
               </div>
@@ -234,14 +234,14 @@ const Account = () => {
                   type="password"
                   name="password"
                   required
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-full focus:border-purple-400 focus:outline-none"
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-full focus:border-[#630090] focus:outline-none"
                   placeholder="••••••••"
                 />
               </div>
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 rounded-full font-semibold transition-colors disabled:opacity-50"
+                className="w-full bg-[#630090] hover:bg-[#4a006b] text-white py-3 rounded-full font-semibold transition-colors disabled:opacity-50"
               >
                 {loading ? 'Loading...' : 'Sign Up'}
               </button>

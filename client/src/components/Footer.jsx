@@ -4,10 +4,10 @@ import logo from '../a1ssets/logo.png';
 
 const Footer = () => {
   return (
-    <footer className="bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-100 via-pink-100  mt-12">
+    <footer className="bg-[#ccf5f5]  mt-12">
       <div className="max-w-7xl mx-auto px-4 py-8 md:py-12">
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 mb-6">
-          <div className="w-24 h-24 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-purple-200 via-pink-200 to-purple-300 rounded-full flex items-center justify-center shadow-lg p-2">
+          <div className="w-24 h-24 bg-white rounded-full flex items-center justify-center shadow-lg p-2">
             <img src={logo} alt="Pencil Panda" className="w-full h-full object-contain" />
             {/* <span className="text-3xl"></span> */}
           </div>
@@ -74,15 +74,7 @@ const Footer = () => {
               >
                 <Instagram size={24} strokeWidth={1.5} />
               </a>
-              <a 
-                href="https://youtube.com/@pencilpandaofficial" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-gray-400 hover:text-red-600 transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube size={24} strokeWidth={1.5} />
-              </a>
+              
             </div>
           </div>
         </div>
